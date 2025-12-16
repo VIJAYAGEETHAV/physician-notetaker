@@ -29,24 +29,25 @@ The pipeline mirrors real-world healthcare AI systems by being **modular, explai
 ---
 
 ## Project Structure
-'''
+''' 
 physician-notetaker/
 │
-├── main.py # Entry point for the full pipeline
-├── ner_extraction.py # Medical entity extraction & normalization
-├── sentiment_intent.py # Transformer-based sentiment & intent analysis
-├── soap_generator.py # SOAP note generator
+├── main.py
+├── ner_extraction.py
+├── sentiment_intent.py
+├── soap_generator.py
 │
 ├── outputs/
-│ ├── medical_summary.json # Structured medical summary
-│ ├── sentiment_intent.json # Sentiment & intent output
-│ └── soap_note.json # Generated SOAP note
+│ ├── medical_summary.json
+│ ├── sentiment_intent.json
+│ └── soap_note.json
 │
-├── sample_input_output.json # Example input & expected output
-├── requirements.txt # Python dependencies
+├── sample_input_output.json
+├── requirements.txt
 ├── .gitignore
 └── README.md
 '''
+
 
 ---
 
@@ -82,38 +83,37 @@ Copy code
   "Prognosis": "Full recovery expected within six months"
 }
 
- ## Design Decisions
- 
-Hybrid NLP instead of pure LLMs for deterministic behavior
+## Design Decisions
 
-Transformer-based sentiment analysis without unnecessary fine-tuning
+- **Hybrid NLP approach over pure LLMs** to ensure deterministic, reproducible behavior suitable for production environments  
+- **Transformer-based sentiment analysis** used in inference-only mode, avoiding unnecessary fine-tuning to maintain stability and simplicity  
+- **Modular system architecture** that enables easy extension, replacement, or independent testing of components  
+- **Zero hallucination tolerance** — all outputs are strictly grounded in the provided input text  
 
-Modular architecture enabling easy extension or replacement
+These decisions reflect **production-oriented AI engineering practices**, not experimental prototyping.
 
-No hallucinated data — outputs are strictly grounded in input text
+---
 
-These choices reflect production-oriented AI engineering, not experimental prototyping.
+## Limitations & Future Improvements
 
-Limitations & Future Improvements
-Speaker-aware attribution for multi-turn conversations
+- **Speaker-aware attribution** to better handle multi-turn physician–patient conversations  
+- **Domain-specific medical language models** such as BioBERT or ClinicalBERT for improved clinical accuracy  
+- **Confidence scoring mechanisms** across aggregated patient utterances  
+- **API-based deployment** to enable seamless integration with clinical systems  
 
-Domain-specific medical models (BioBERT / ClinicalBERT)
-
-Confidence scoring across multiple patient utterances
-
-API-based deployment for clinical integration
+---
 
 ## Conclusion
+
 This project demonstrates the ability to:
 
-Translate ambiguous requirements into a structured AI system
+- Translate ambiguous requirements into a **structured, end-to-end AI system**  
+- Apply **NLP and transformer models pragmatically** rather than heuristically  
+- Build **explainable, healthcare-ready pipelines** aligned with real-world constraints  
 
-Apply NLP and transformers pragmatically
+The solution prioritizes **clarity, reliability, and extensibility**, aligning closely with expectations for production-grade AI systems in healthcare.
 
-Build explainable, healthcare-ready pipelines
+---
 
-The solution prioritizes clarity, reliability, and extensibility, aligning with real-world AI product expectations.
-
-Author: Vijayageetha V
-Role Applied: AI Engineer Intern – Emitrr
-
+**Author:** Vijayageetha V  
+**Role Applied:** AI Engineer Intern – Emitrr
