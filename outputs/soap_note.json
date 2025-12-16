@@ -1,0 +1,18 @@
+{
+  "Subjective": {
+    "Chief_Complaint": null,
+    "History_of_Present_Illness": "Doctor: How are you feeling today?"
+  },
+  "Objective": {
+    "Physical_Exam": null,
+    "Observations": null
+  },
+  "Assessment": {
+    "Diagnosis": null,
+    "Severity": "Stable"
+  },
+  "Plan": {
+    "Treatment": null,
+    "Follow-Up": null
+  }
+}

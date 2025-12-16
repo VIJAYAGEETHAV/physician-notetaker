@@ -1,0 +1,36 @@
+{
+    "input_transcript": "Doctor: How are you feeling today?\nPatient: I had a car accident. My neck and back hurt a lot for four weeks.\nDoctor: Did you receive treatment?\nPatient: Yes, I had ten physiotherapy sessions, and now I only have occasional back pain.",
+    "outputs": {
+      "medical_summary": {
+        "Patient_Name": null,
+        "Symptoms": ["Neck pain", "Back pain"],
+        "Diagnosis": null,
+        "Treatment": ["Physiotherapy"],
+        "Current_Status": "Occasional backache",
+        "Prognosis": null
+      },
+      "sentiment_intent": {
+        "Sentiment": "Neutral",
+        "Intent": "Reporting symptoms"
+      },
+      "soap_note": {
+        "Subjective": {
+          "Chief_Complaint": "Neck pain, Back pain",
+          "History_of_Present_Illness": "Doctor: How are you feeling today?\nPatient: I had a car accident..."
+        },
+        "Objective": {
+          "Physical_Exam": null,
+          "Observations": null
+        },
+        "Assessment": {
+          "Diagnosis": null,
+          "Severity": "Stable"
+        },
+        "Plan": {
+          "Treatment": "Physiotherapy",
+          "Follow-Up": null
+        }
+      }
+    }
+  }
+  
