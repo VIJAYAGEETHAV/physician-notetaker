@@ -1,35 +1,38 @@
-# 🩺 Physician Notetaker – Medical NLP Pipeline (Emitrr Assignment)
+# 🩺 Physician Notetaker – AI Engineer Intern Assignment (Emitrr)
 
 ## Overview
 
-This project implements an **end-to-end Medical NLP pipeline** that converts raw physician–patient conversations into **structured clinical outputs**.  
-The solution focuses on **robust information extraction, sentiment & intent analysis, and automated SOAP note generation**, designed with **deterministic, production-ready engineering principles**.
+This project implements an **end‑to‑end AI‑driven Physician Notetaker system** that converts raw doctor–patient conversations into structured, clinically meaningful outputs. The solution focuses on **medical NLP, transformer‑based sentiment analysis, and healthcare documentation automation**, with an emphasis on **deterministic, production‑ready design** rather than ad‑hoc experimentation.
 
-The pipeline mirrors real-world healthcare AI systems by being **modular, explainable, reproducible, and resilient to noisy conversational input**.
+The pipeline mirrors how real-world healthcare AI systems are built: modular, explainable, reproducible, and robust to noisy conversational input.
 
 ---
 
 ## Key Capabilities
 
-### 1. Medical Information Extraction
-- Extracts **Symptoms, Diagnosis, Treatment, Current Status, Prognosis**
-- Converts unstructured text into a **structured medical summary (JSON)**
-- Uses a **hybrid NLP approach (spaCy + rule-based normalization)** for reliability and transparency
+### 1. Medical NLP Summarization
+
+* Extracts **Symptoms, Diagnosis, Treatment, Prognosis** from raw transcripts
+* Converts unstructured dialogue into a **structured medical summary (JSON)** suitable for EHR systems
+* Uses a **hybrid NLP approach** (spaCy + rule-based logic) for reliability and explainability
 
 ### 2. Sentiment & Intent Analysis
-- Uses a **Transformer-based model (DistilBERT)** for sentiment detection
-- Identifies patient **intent** such as reporting symptoms or expressing concern
-- Inference-only design for fast, stable execution
 
-### 3. SOAP Note Generation
-- Automatically generates a structured **SOAP note**
-- Output designed for **clinical readability**
-- Demonstrates healthcare workflow awareness beyond basic NLP
+* Applies a **Transformer-based model (DistilBERT)** for patient sentiment classification
+* Detects patient **intent** (e.g., reporting symptoms, seeking reassurance)
+* Outputs confidence-scored, interpretable results
+
+### 3. SOAP Note Generation (Bonus)
+
+* Automatically generates a structured **SOAP note** (Subjective, Objective, Assessment, Plan)
+* Designed for **clinical readability** and downstream medical workflows
+* Demonstrates healthcare-domain understanding beyond basic NLP
 
 ---
 
 ## Project Structure
-''' 
+
+```
 physician-notetaker/
 │
 ├── main.py
@@ -46,8 +49,7 @@ physician-notetaker/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-'''
-
+```
 
 ---
 
@@ -57,49 +59,49 @@ physician-notetaker/
 - Python **3.9+** recommended
 
 ### Install Dependencies
-```bash
+
 pip install -r requirements.txt
-Download spaCy Model
-bash
-Copy code
+
+###  Download spaCy Model
+
+```bash
 python -m spacy download en_core_web_sm
-How to Run
-Run the complete pipeline:
+```
+---
 
-bash
-Copy code
+## How to Run
+
+Execute the complete pipeline:
+
+```bash
 python main.py
-You will be prompted to paste a physician–patient transcript.
-The pipeline generates structured outputs in the outputs/ directory.
+```
 
-Sample Output (Excerpt)
-json
-Copy code
-{
-  "Symptoms": ["Back pain", "Head impact"],
-  "Diagnosis": null,
-  "Treatment": ["Physiotherapy", "Painkillers"],
-  "Current_Status": "Occasional backache",
-  "Prognosis": "Full recovery expected within six months"
-}
+This will generate:
 
-## Design Decisions
+* `output/medical_summary.json`
+* `output/sentiment.json`
+* `output/soap_note.json`
 
-- **Hybrid NLP approach over pure LLMs** to ensure deterministic, reproducible behavior suitable for production environments  
-- **Transformer-based sentiment analysis** used in inference-only mode, avoiding unnecessary fine-tuning to maintain stability and simplicity  
-- **Modular system architecture** that enables easy extension, replacement, or independent testing of components  
-- **Zero hallucination tolerance** — all outputs are strictly grounded in the provided input text  
+---
 
-These decisions reflect **production-oriented AI engineering practices**, not experimental prototyping.
+## Design Decisions (Recruiter Perspective)
+
+* **Hybrid NLP over pure LLMs**: Ensures deterministic behavior, critical for healthcare use cases
+* **Transformer-based sentiment analysis**: Demonstrates modern NLP competence without unnecessary fine-tuning
+* **Modular architecture**: Each component can be independently tested, replaced, or scaled
+* **No hallucinated data**: All outputs are grounded in the provided transcript
+
+This design reflects **production thinking**, not just assignment completion.
 
 ---
 
 ## Limitations & Future Improvements
 
-- **Speaker-aware attribution** to better handle multi-turn physician–patient conversations  
-- **Domain-specific medical language models** such as BioBERT or ClinicalBERT for improved clinical accuracy  
-- **Confidence scoring mechanisms** across aggregated patient utterances  
-- **API-based deployment** to enable seamless integration with clinical systems  
+* Speaker-aware entity filtering for finer symptom attribution
+* Domain-specific medical NER models (e.g., BioBERT / ClinicalBERT)
+* Confidence aggregation across multiple patient utterances
+* REST API wrapper for integration into clinical systems
 
 ---
 
@@ -107,13 +109,11 @@ These decisions reflect **production-oriented AI engineering practices**, not ex
 
 This project demonstrates the ability to:
 
-- Translate ambiguous requirements into a **structured, end-to-end AI system**  
-- Apply **NLP and transformer models pragmatically** rather than heuristically  
-- Build **explainable, healthcare-ready pipelines** aligned with real-world constraints  
+* Translate ambiguous requirements into a clear AI system
+* Apply NLP and transformers pragmatically
+* Build explainable, healthcare-ready AI pipelines
 
-The solution prioritizes **clarity, reliability, and extensibility**, aligning closely with expectations for production-grade AI systems in healthcare.
+The solution is intentionally **simple, reliable, and extensible**, aligning with how real AI systems are evaluated and deployed in production environments.
 
 ---
 
-**Author:** Vijayageetha V  
-**Role Applied:** AI Engineer Intern – Emitrr
