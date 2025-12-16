@@ -29,7 +29,7 @@ The pipeline mirrors real-world healthcare AI systems by being **modular, explai
 ---
 
 ## Project Structure
-
+'''
 physician-notetaker/
 │
 ├── main.py # Entry point for the full pipeline
@@ -46,9 +46,7 @@ physician-notetaker/
 ├── requirements.txt # Python dependencies
 ├── .gitignore
 └── README.md
-
-yaml
-Copy code
+'''
 
 ---
 
@@ -83,7 +81,9 @@ Copy code
   "Current_Status": "Occasional backache",
   "Prognosis": "Full recovery expected within six months"
 }
-Design Decisions
+
+ ## Design Decisions
+ 
 Hybrid NLP instead of pure LLMs for deterministic behavior
 
 Transformer-based sentiment analysis without unnecessary fine-tuning
@@ -103,7 +103,7 @@ Confidence scoring across multiple patient utterances
 
 API-based deployment for clinical integration
 
-Conclusion
+## Conclusion
 This project demonstrates the ability to:
 
 Translate ambiguous requirements into a structured AI system
@@ -117,5 +117,3 @@ The solution prioritizes clarity, reliability, and extensibility, aligning with 
 Author: Vijayageetha V
 Role Applied: AI Engineer Intern – Emitrr
 
-markdown
-Copy code
